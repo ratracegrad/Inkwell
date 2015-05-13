@@ -8,6 +8,7 @@ angular.module('familyThiefApp')
     $scope.helpRequest.id = Auth.getHelpRequest();
     $scope.hasVoted = false;
     $scope.contributionSuccess = false;
+    $scope.invalidContrib = false;
   
 
     // grabs the appropriate helpRequest data based on property stored in Auth service
@@ -27,28 +28,35 @@ angular.module('familyThiefApp')
 
     $scope.respondToHelpRequest = function() {
       var contribText = $scope.newContribution.text;
-      $http.post('/api/contributions', {
+      if (contribText) {
+        $scope.invalidContrib = false;
+        $http.post('/api/contributions', {
         helperUsername: $scope.currentUser.username,
         helpedId: Auth.getHelpRequest(),  // returns the id of the currently viewed help request
         text: $scope.newContribution.text
-      })
-      .success(function(data, status) {
-        // make this new data display in this view
-        $scope.helpRequest.contributions.push({
-          helperUsername: $scope.currentUser.username, // username of contributor
-          id: data.id,
-          textSnippet: contribText,
-          username: $scope.helpRequest.username, // owner of help request
-          origDate: data.origDate
-        });
-        $scope.currentUser.contributions.push({
-          id: data.id,
-          textSnippet: contribText,
-          helperUsername: $scope.currentUser.username,
-          origDate: data.origDate
-        });
-        $scope.contributionSuccess = true;
-      })
+        })
+        .success(function(data, status) {
+          // make this new data display in this view
+          $scope.helpRequest.contributions.push({
+            helperUsername: $scope.currentUser.username, // username of contributor
+            id: data.id,
+            textSnippet: contribText,
+            username: $scope.helpRequest.username, // owner of help request
+            origDate: data.origDate
+          });
+          $scope.currentUser.contributions.push({
+            id: data.id,
+            textSnippet: contribText,
+            helperUsername: $scope.currentUser.username,
+            origDate: data.origDate
+          });
+          $scope.contributionSuccess = true;
+        })
+      } else { //alert user that they have not contributed anything yet
+        $scope.invalidContrib = true;
+      }
+
+      
     };
 
     $scope.loadContribution = function(id) {

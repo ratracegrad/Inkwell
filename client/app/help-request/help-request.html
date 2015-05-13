@@ -14,8 +14,9 @@
       <div class="col-md-6"> 
         <form ng-show="isOwner === false" name="contributionForm" ng-submit="respondToHelpRequest()" novalidate>   
           <label for="newContributionText">Your Contribution</label>
-          <textarea rows="8" type="text" class="form-control" name="newContributionText" ng-model="newContribution.text" id="ContributionsText"></textarea>
+          <textarea rows="8" type="text" class="form-control" name="newContributionText" ng-model="newContribution.text" id="ContributionsText" style="margin: 0 0 10px 0;"></textarea>
           <button type="submit" class="btn btn-primary">Submit</button><span ng-show="contributionSuccess"> Submission successful</span>
+          <div style="margin-top:5px;" class="alert alert-danger alert-error" ng-if="invalidContrib"><strong>Error: </strong>Nothing submitted!</div>
         </form>
         <h2>Contributions</h2>
           <a class="list-item" ng-repeat="contribution in helpRequest.contributions | orderBy: '-origDate'" ng-click='loadContribution(contribution.id)'> 
