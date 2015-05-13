@@ -5,7 +5,7 @@
       <h1 ng-show="isOwner === true">Your Help Request</h1>
       <div class="col-md-6">
         <h1>{{helpRequest.title}}<span> - {{helpRequest.votes}} votes</span></h1>
-        <button class="btn btn-primary" ng-show="isOwner === false" ng-click="upvote()">Upvote Help Request</button>
+        <button class="btn btn-primary" ng-show="isOwner === false && !hasVoted" ng-click="upvote()">Upvote Help Request</button>
         <h3>Summary</h3>
         <p ng-model="helpRequest.summary" id="hrSummary">{{helpRequest.summary}}</p>
         <h3>Text</h3>
