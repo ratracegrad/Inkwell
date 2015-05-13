@@ -50,8 +50,15 @@ app.post('/api/helpRequests', function(req, res){
 //path for votes
 app.post('/api/helpRequests/votes', function(req, res){
   var decoded = jwt.decode(req.headers.authorization.slice(7));
-  helper.projectUpvote(decoded.id, req.body.helpRequestId, res);
+  helper.projectUpvote(req.body.upvoter, req.body.helpRequestId, res);
 });
+
+app.post('/api/helpRequests/hasVoted', function(req, res) {
+  var decoded = jwt.decode(req.headers.authorization.slice(7));
+  helper.projectHasVoted(req.body.upvoter, req.body.helpRequestId, res);
+});
+
+
 
 //path for viewing specific helpRequest
 app.get('/api/helpRequests/:id', function(req, res){

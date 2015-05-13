@@ -6,8 +6,8 @@ var Project = require('./project.js');
 var ProjectUpvote = db.define('ProjectUpvote',
   {
     upvoter: Sequelize.INTEGER,
-    projectupvoted: Sequelize.INTEGER
-
+    projectupvoted: Sequelize.INTEGER,
+ 
   }
 );
 

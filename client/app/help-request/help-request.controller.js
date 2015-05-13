@@ -57,18 +57,34 @@ angular.module('familyThiefApp')
     };
 
     $scope.upvote = function() {
+      $scope.hasVotedYet();
+
+
       if(!$scope.hasVoted) {
         $http.post("api/helpRequests/votes", {
-          helpRequestId: Auth.getHelpRequest()
+          helpRequestId: Auth.getHelpRequest(),
+          upvoter: $scope.currentUser.username
         })
         .success(function(data, status) {
           $scope.currentUser.votes += 1;
           $scope.helpRequest.votes += 1;
         });
+      } else {
+        alert('You have already voted!');
       }
     }
 
+    $scope.hasVotedYet = function() {
 
+      $http.post('api/helpRequests/hasVoted', {
+        helpRequestId: Auth.getHelpRequest(),
+        upvoter: $scope.currentUser.username
+      })
+      .success(function(data, status) {
+        $scope.hasVoted = data;
+      });
+    }
     
 
   });
+ 
