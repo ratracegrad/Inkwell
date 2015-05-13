@@ -142,11 +142,36 @@ module.exports.helpRequest = function(username, project, response) {
   });
 };
 
+// up votes on projects
 module.exports.projectUpvote = function(userId, projectId, response) {
-  ProjectUpvote.create({upvoter: userId, projectupvoted: projectId}).then(function() {
-      response.send(201, "Project upvoted");
-    })
+  User.find({where: {username: userId}}).then(function(user) {
+    if (user) {
+      ProjectUpvote.create({upvoter: user.id, projectupvoted: projectId}).then(function() {
+        response.send(201, "Project upvoted");
+      })
+    }
+  })
 };
+
+module.exports.projectHasVoted = function(userId, projectID, response) {
+  User.find({where: {username: userId}}).then(function(user) {
+    if (user) {
+      ProjectUpvote.findAndCountAll({where:{projectupvoted: projectID, upvoter: user.id}}).then(function(numVotes) {
+        if (numVotes) {
+          response.send(201, true);
+        } else {
+          response.send(201, false);
+        }  
+      })
+    } else {
+      response.send(201, false);
+    }
+    
+  })
+}
+
+// -----------------------------------------------------------------
+
 
 module.exports.viewProject = function(projectId, response) {
   Project.find({where: {id: projectId}, include: [User]}).then(function(project) {
@@ -221,6 +246,11 @@ module.exports.contributionUpvote = function(userId, contributionId, response) {
       response.send(201, "Contribution upvoted");
     })
 };
+
+
+
+
+
 
 module.exports.viewContribution = function(contributionId, decoded, response) {
   Contribution.find({where: {id: contributionId}}).then(function(contribution) {
