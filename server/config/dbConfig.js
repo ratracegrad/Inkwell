@@ -7,7 +7,7 @@ var Sequelize = require('sequelize');
 
 var sequelize = new Sequelize('websteamCMD', 'root', '', {
   host: 'localhost',
-  dialect: 'mysql'
+  dialect: 'postgres'
 });
 
 module.exports = sequelize;
