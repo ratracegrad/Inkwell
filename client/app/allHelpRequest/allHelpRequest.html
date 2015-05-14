@@ -2,7 +2,9 @@
 
 <div class="container">
   <div class="row">
-    <h2 class="page-header">Find Writing to Contribute To</h2> 
+    <h2>Discover Projects</h2>
+    <hr class="divider">
+    <!-- <h2 class="page-header">Find Writing to Contribute To</h2> 
   </div>
   <div class="row">
     <div class="col-lg-6 col-lg-offset-3 text-center">
@@ -11,22 +13,21 @@
       <form name="searchForm" ng-submit="search()" novalidate>
         <input type="text" class="form-control" ng-model="searchString" id="string" name="string" required> 
         <input type="submit" class="btn btn-primary" value="search" ng-disabled="searchForm.$invalid">
-      </form> 
+      </form>  -->
+    <!-- </div> -->
+  </div>
+
+  <div class="row">
+    <div class="col-lg-4" ng-repeat="result in resultList | limitTo: 24 | orderBy: '-origDate'">
+      <a class="search-item" ng-click='loadHelpRequest(result.id)'>
+      <div class="listing-item-icon"><i class="icon-book icon-3x"></i></div>
+      <div>
+        <div class="result-title"><strong>{{result.title}}</strong></div>
+        <span>Created: {{result.origDate | date:'MM-dd-yyyy'}}</span>
+        <span>Created by {{result.username}}</span>
+      </div>
+      </a>
     </div>
   </div>
-  <a class="search-item" ng-repeat="result in resultList | limitTo: 25 | orderBy: '-origDate'" ng-click='loadHelpRequest(result.id)'>
-    <div class="search-list-item">
-        <div class="row">
-          <div class="col-lg-4">
-            <p>{{result.title}}</p>
-          </div>
-          <div class="col-lg-6">
-            <p>{{result.summary}}</p>
-          </div>
-          <div class="col-lg-2">
-            <p>{{result.origDate | date:'yyyy-MM-dd'}}</p>
-          </div>
-        </div>
-    </div>
-  </a>	
-</divb>
+
+</div>
