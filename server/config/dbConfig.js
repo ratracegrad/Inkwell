@@ -5,7 +5,7 @@ var Sequelize = require('sequelize');
 // go for it.  Check out Sequelize's docs for more info:
 // http://sequelize.readthedocs.org/en/latest/
 
-var sequelize = new Sequelize('websteamCMD', 'root', '', {
+var sequelize = new Sequelize('d82ki0tje0if63', 'gycipvjtlneoii', 'afg8aTp2Na94knzoBIvvq6Oorj', {
   host: 'localhost',
   dialect: 'postgres'
 });
