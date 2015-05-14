@@ -7,7 +7,8 @@ var Sequelize = require('sequelize');
 
 var sequelize = new Sequelize('d82ki0tje0if63', 'gycipvjtlneoii', 'afg8aTp2Na94knzoBIvvq6Oorj', {
   host: 'ec2-107-20-222-114.compute-1.amazonaws.com',
-  dialect: 'postgres'
+  dialect: 'postgres',
+  port: 5432
 });
 
 module.exports = sequelize;
