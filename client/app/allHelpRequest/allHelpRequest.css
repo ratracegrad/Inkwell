@@ -47,3 +47,14 @@ a.search-item:hover {
   margin: 10px 0 30px 0;
   color: #313131;
 }
+
+.searchField {
+  height: 35px;
+  width: 275px;
+  background-image: url("icon-search.png");
+  background-repeat: no-repeat;
+  background-position: 10px;
+  padding-left: 25px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}

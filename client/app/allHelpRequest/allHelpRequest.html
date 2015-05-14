@@ -4,16 +4,19 @@
   <div class="row">
     <h2>Discover Projects</h2>
     <hr class="divider">
+
+    <form name="searchForm" ng-submit="search()" novalidate>
+      <input type="text" class="searchField" placeholder="Search by project name or owner" ng-model="searchString" id="string" name="string" required> 
+      <input type="submit" class="btn btn-primary" value="search" ng-disabled="searchForm.$invalid">
+    </form>
+    <hr class="divider">
     <!-- <h2 class="page-header">Find Writing to Contribute To</h2> 
   </div>
   <div class="row">
     <div class="col-lg-6 col-lg-offset-3 text-center">
       <a class="btn btn-success btn-md" ng-click="getRecentlySubmitted()">See Recent Help Requests</a>
       <h2>or</h2>
-      <form name="searchForm" ng-submit="search()" novalidate>
-        <input type="text" class="form-control" ng-model="searchString" id="string" name="string" required> 
-        <input type="submit" class="btn btn-primary" value="search" ng-disabled="searchForm.$invalid">
-      </form>  -->
+        -->
     <!-- </div> -->
   </div>
 
