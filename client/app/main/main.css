@@ -185,7 +185,6 @@ body, html{
     border-radius: 0px;
     font-family: helvetica, arial, sans-serif;
     font-size: 17px;
-    opacity: 0.8;
     padding-top: 50px;
     height: 140px;
 }
@@ -289,9 +288,9 @@ a, :visited{
 
 .bordered {
     /*border-top: 3px solid #585858;*/
-    border-bottom: 3px solid #585858;
-    border-left: 3px solid #585858;
-    /*border-bottom: 1px solid #585858;*/
+    /*border-bottom: 3px solid #585858;*/
+    border-right: 3px solid #585858;
+    border-bottom: 1px solid #585858;
     border-radius: 0px;
 }
 
