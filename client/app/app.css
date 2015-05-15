@@ -37,3 +37,37 @@
     color: #000;
     padding: 0.2em 0;
 }
+
+.navbar {
+    background: #383838;
+    margin: 0;
+    border: 0;
+}
+
+.main-link {
+    font-family: helvetica, arial, sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+    margin-left: 50px;
+    text-decoration: none;
+    color: white;
+    letter-spacing: -4px;
+}
+
+.nav {
+    margin-right: 50px !important;
+    margin-top: 20px;
+    font-size: 20px;
+    font-family: helvetica, arial, sans-serif;
+    font-weight: bold;
+    color: white !important;
+
+}
+
+.nav > li > a {
+    color: white !important;
+}
+
+.nav > li > a:hover {
+    text-decoration: underline;
+}

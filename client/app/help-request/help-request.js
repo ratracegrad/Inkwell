@@ -9,6 +9,6 @@ angular.module('familyThiefApp')
         url: '/help-request',
         templateUrl: 'app/help-request/help-request.html',
         controller: 'HelpRequestCtrl', 
-        authenticate: true
+        authenticate: false
       });
   });

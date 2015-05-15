@@ -15,10 +15,9 @@
 }
 
 .header-block {
-  height: 400px;
+  height: 150px;
   width: 100%;
   padding-left: 100px;
-  border-left: 1px solid lightgrey;
   font-family: helvetica, arial, sans-serif;
   font-size: 50px;
   font-weight: bold;
@@ -26,6 +25,7 @@
   display: table-cell;
   vertical-align: middle;
   opacity: 0.6;
+  background: #f8f8f8;
 }
 
 .header-block::after {
@@ -40,4 +40,12 @@
     margin-top: -50px;
     position: absolute;
     display: block;
+}
+
+.greyed {
+  background: #f8f8f8;
+}
+
+.submission-title {
+  height: 150px;
 }

@@ -8,6 +8,11 @@ body, html{
     padding: 0;
 }
 
+.hero-holder {
+    background: #383838;
+    color: #f8f8f8;
+}
+
 #banner h1 {
     font-size: 80px;
     line-height: 1;
@@ -22,25 +27,26 @@ body, html{
     line-height: 1;
     letter-spacing: -3px;
     /*font-weight: 300;*/
-    opacity: 0.4;
+    opacity: 0.55;
     font-family: helvetica;
+    color: white;
     /*color: white; */
 }
 
 .hero-unit {
     /*position: relative;*/
     padding: 0;
-    height: 350px;
+    height: 200px;
     /*background: #F8F8F8;*/
     overflow: hidden;
     /*color: white;*/
     /*text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);*/
     /*background: #505050;*/
-    border-bottom: 1px solid #D8D8D8;
+    /*border-bottom: 1px solid #D8D8D8;*/
 }
 
 .left-header {
-    padding-top: 70px;
+    padding-top: 0px;
     height: 100%;
     /*background: url(http://images.fineartamerica.com/images-medium-large-5/1-zen-garden-dirk-ercken.jpg) no-repeat;
     background-position: -150px -200px;
@@ -85,9 +91,9 @@ body, html{
     display: block;
     /*background: grey;*/
     opacity: 0.3;
-    padding-top: 130px;
-    padding-bottom: 200px;
+    padding-top: 70px;
     padding-left: 100px;
+    padding-bottom: 100px;
     /*text-align: center;*/
     font-family: helvetica, arial, sans-serif;
     font-size: 45px;
@@ -127,7 +133,7 @@ body, html{
 }
 
 .input-title {
-    height: 400px;
+    height: 250px;
     outline: none !important;
     box-shadow: none;
     font-size: 50px;
@@ -143,9 +149,10 @@ body, html{
     box-shadow: none;
     margin: 0;
     padding-top: 50px;
-    font-size: 18px;
+    font-size: 17px;
     padding-right: 25px;
     border: 0;
+    height: 200px;
 }
 .input-text-model:focus {
     box-shadow: none;
@@ -160,7 +167,7 @@ body, html{
     opacity: 0.85;
     background: rgb(240,240,240);
     font-size: 16px;
-    min-height: 950px;
+    min-height: 650px;
 }
 
 .input-title:focus{
@@ -177,23 +184,22 @@ body, html{
     /*color: white;*/
     border-radius: 0px;
     font-family: helvetica, arial, sans-serif;
-    font-size: 24px;
+    font-size: 17px;
     opacity: 0.8;
     padding-top: 50px;
-    height: 340px;
+    height: 140px;
 }
 
 .input-summary:focus {
     box-shadow: none;
-    border-top: 1px solid #D8D8D8;
 }
 
 .site-info {
-    height: 400px;
-    border-bottom: 1px solid #D8D8D8;
-    padding-top: 50px;
+    height: 250px;
+    /*border-bottom: 1px solid #D8D8D8;*/
+    padding-top: 25px;
     font-family: helvetica, arial, sans-serif;
-    font-size: 21px;
+    font-size: 17px;
     opacity: 0.75;
     max-width: 400px;
     padding-left: 100px;
@@ -212,7 +218,7 @@ a, :visited{
 }
 */
 .blurb {
-    margin-bottom: 40px;
+    margin-bottom: 25px;
 }
 
 .emphasize {
@@ -235,7 +241,7 @@ a, :visited{
 
 .auth-button {
     position: absolute;
-    top: 150px;
+    top: 95px;
     background: #4682B4;
     padding: 15px;
     color: white;
@@ -266,12 +272,29 @@ a, :visited{
     font-family: helvetica, arial, sans-serif;
 }
 
-.pencil-img {
+/*.pencil-img {
     background: url(http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons-256/glossy-black-icons-business/080859-glossy-black-icon-business-pencil8.png) no-repeat;
     background-size: 50px 50px;
-    background-position: 45px 115px;
+    background-position: 45px 40px;
 }
 
 .pencil-img:focus {
     background: none;
+}*/
+
+.darkgreyed {
+    background: #E8E8E8;
+    color: white;
+}
+
+.bordered {
+    /*border-top: 3px solid #585858;*/
+    border-bottom: 3px solid #585858;
+    border-left: 3px solid #585858;
+    /*border-bottom: 1px solid #585858;*/
+    border-radius: 0px;
+}
+
+.form-group {
+    margin: 0;
 }

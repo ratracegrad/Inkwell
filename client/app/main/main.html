@@ -1,11 +1,11 @@
 <!-- <div ng-include="'components/navbar/navbar.html'"></div> -->
 
 <div class="hero-unit" id="banner">
-  <div class="left-holder left-header">
+  <div class="left-holder left-header hero-holder">
     <h1 class="hero-header left-padding">inkwell</h1>
     <p class="lead left-padding">collaborative writing</p>
   </div>
-  <div class="right-holder left-border">
+  <div class="right-holder darkgreyed">
       <a class="help-others" href='/allHelpRequest'>discover writing</a>
   </div>
 </div>
@@ -13,24 +13,24 @@
 <div class="left-holder">
   <form name="helpRequestForm" class="submission-form" ng-submit="submitHelpRequest(helpRequestForm.$valid)" novalidate>
     <div class="form-group">
-      <input type="text" class="form-control input-title left-padding pencil-img" ng-model="helpRequest.title" id="helpRequestTitle" name="title" required placeholder="Type title here." autocomplete="off">
+      <input type="text" class="bordered form-control input-title left-padding pencil-img" ng-model="helpRequest.title" id="helpRequestTitle" name="title" required placeholder="Type title here." autocomplete="off">
       <p ng-show="helpRequestForm.title.$invalid && !helpRequestForm.title.$pristine" class="help-block">The title is required.</p>
     </div>
     <div class="form-group">
-      <textarea msd-elastic rows="15" type="text" class="form-control input-text-model no-resize left-padding" ng-model="helpRequest.text" id="helpRequestText" name="text" required>
+      <textarea msd-elastic rows="10" type="text" class="bordered form-control input-text-model no-resize left-padding" ng-model="helpRequest.text" id="helpRequestText" name="text" required>
         My header here
       </textarea>
       <p ng-show="helpRequestForm.text.$invalid && !helpRequestForm.text.$pristine" class="help-block">Your writing is required.</p>
     </div>
     <div class="form-group">
-      <input rows="8" type="text" class="form-control no-resize input-summary left-padding pencil-img" ng-model="helpRequest.summary" id="helpRequestSummary" name="summary" required placeholder="summary of what you want help with"></input>
+      <input rows="8" type="text" class="bordered form-control no-resize input-summary left-padding pencil-img" ng-model="helpRequest.summary" id="helpRequestSummary" name="summary" required placeholder="summary of what you want help with"></input>
     </div>
     <button type="submit" class="btn btn-primary btn-hero" ng-disabled="userForm.$invalid">Submit</button><p ng-show="submissionSuccess === true" class="success-color">Your help request for this piece of writing has been submitted.</p><p ng-show="submissionError === true" class="error-color">You need to fill more of the form out</p>
   </form>
 </div>
 
-<div class="right-holder tall">
-  <div class="site-info left-border">
+<div class="right-holder tall greyed">
+  <div class="site-info">
      <p class="blurb">Become great at writing by getting feedback from experts.</p>
      <p class="blurb">Contribute to prose written by others. Show off your mastery.</p>
      <p class="blurb emphasize">Start writing, now. Without making an account. Really.</p>
