@@ -33,7 +33,7 @@ describe('ContributionCtrl', function () {
     }));
 
   it("should have an addComment method", function(){  
-    expect($scope.addComment).to.be.a('function');
+    expect($scope.addComment).to.be.a('string');
     //assert.equal(typeof ContributionCtrl.addComment, 'function');
   });
 

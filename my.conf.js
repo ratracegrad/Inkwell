@@ -15,7 +15,7 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-    //client files
+    //dependecy files
       'client/bower_components/angular/angular.js',
       'client/bower_components/angular-resource/angular-resource.js',
       'client/bower_components/angular-route/angular-route.js',
@@ -25,7 +25,7 @@ module.exports = function(config) {
       'client/bower_components/angular-bootstrap/ui-bootstrap-tpls.js',
       'client/bower_components/lodash/dist/lodash.compat.js',
       'client/bower_components/angular-ui-router/release/angular-ui-router.js',
-    
+    //client files
       'client/app/app.js',
       'client/app/account/account.js',
       'client/app/account/login/login.controller.js',
@@ -53,7 +53,6 @@ module.exports = function(config) {
       'client/components/auth/user.service.js',
       'client/components/modal/modal.service.js',
       'client/components/navbar/navbar.controller.js',
-
    //test files
       'test/**/*.js'
     ],
