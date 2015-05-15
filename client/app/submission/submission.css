@@ -9,3 +9,35 @@
 .error-color {
   color: red;
 }
+
+.space-top {
+  margin-top: 400px;
+}
+
+.header-block {
+  height: 400px;
+  width: 100%;
+  padding-left: 100px;
+  border-left: 1px solid lightgrey;
+  font-family: helvetica, arial, sans-serif;
+  font-size: 50px;
+  font-weight: bold;
+  letter-spacing: -3px;
+  display: table-cell;
+  vertical-align: middle;
+  opacity: 0.6;
+}
+
+.header-block::after {
+    content: "";
+    width: 50; 
+    height: 0; 
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-right: 20px solid #585858;
+    font-size: 0px;
+    margin-left: -60px;
+    margin-top: -50px;
+    position: absolute;
+    display: block;
+}
