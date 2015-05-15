@@ -71,3 +71,7 @@
 .nav > li > a:hover {
     text-decoration: underline;
 }
+
+.midgreyed {
+    background: #F0F0F0;
+}
