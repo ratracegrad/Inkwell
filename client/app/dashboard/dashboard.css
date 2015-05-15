@@ -16,10 +16,10 @@
 }
 
 
-.dash-list-item:hover {
+/*.dash-list-item:hover {
   cursor: pointer;
   background-color: #448BC3;
-}
+}*/
 
 .dash-corner {
   text-align: right;

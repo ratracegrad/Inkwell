@@ -23,7 +23,7 @@
   <div class="row">
     <div class="col-lg-4" ng-repeat="result in resultList | limitTo: 24 | orderBy: '-origDate'">
       <a class="search-item" ng-click='loadHelpRequest(result.id)'>
-     ch
+      <div class="listing-item-icon"><i class="icon-book icon-3x"></i></div>
       <div>
         <div class="result-title"><strong>{{result.title}}</strong></div>
         <span>Created: {{result.origDate | date:'MM-dd-yyyy'}}</span>
