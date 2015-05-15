@@ -180,12 +180,12 @@ body, html{
     box-shadow: none;
     /*background: #404040;*/
     border: 0;
-    border-top: 1px solid #D8D8D8;
     /*color: white;*/
     border-radius: 0px;
     font-family: helvetica, arial, sans-serif;
     font-size: 17px;
-    padding-top: 50px;
+    padding-top: 25px;
+    padding-bottom: 25px;
     height: 140px;
 }
 
@@ -289,8 +289,8 @@ a, :visited{
 .bordered {
     /*border-top: 3px solid #585858;*/
     /*border-bottom: 3px solid #585858;*/
-    border-right: 3px solid #585858;
-    border-bottom: 1px solid #585858;
+    border-right: 1px solid #C0C0C0;
+    border-bottom: 1px solid #C0C0C0;
     border-radius: 0px;
 }
 
