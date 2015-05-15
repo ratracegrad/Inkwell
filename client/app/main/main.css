@@ -165,7 +165,7 @@ body, html{
     padding-left: 35px;
     overflow: hidden;
     opacity: 0.85;
-    background: rgb(240,240,240);
+    background: #f8f8f8;
     font-size: 16px;
     min-height: 650px;
 }
@@ -282,7 +282,7 @@ a, :visited{
 }*/
 
 .darkgreyed {
-    background: #E8E8E8;
+    background: #E0E0E0 ;
     color: white;
 }
 
