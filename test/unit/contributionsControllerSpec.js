@@ -6,7 +6,7 @@ describe('ContributionCtrl', function () {
   var $rootScope, $location , $http, Auth , Contribution, $scope;
   //console.log(familyThiefApp);
   
-   beforeEach(module('familyThiefApp'));
+  beforeEach(module('familyThiefApp'));
   beforeEach(inject(function($injector) {
 
     $rootScope = $injector.get('$rootScope');
@@ -33,7 +33,7 @@ describe('ContributionCtrl', function () {
     }));
 
   it("should have an addComment method", function(){  
-    expect($scope.addComment).to.be.a('string');
+    expect($scope.addComment).to.be.a('function');
     //assert.equal(typeof ContributionCtrl.addComment, 'function');
   });
 

@@ -25,6 +25,8 @@ module.exports = function(config) {
       'client/bower_components/angular-bootstrap/ui-bootstrap-tpls.js',
       'client/bower_components/lodash/dist/lodash.compat.js',
       'client/bower_components/angular-ui-router/release/angular-ui-router.js',
+      'client/bower_components/angular-marked/angular-marked.min.js',
+      'client/bower_components/angular-elastic/elastic.js',
     //client files
       'client/app/app.js',
       'client/app/account/account.js',
@@ -94,7 +96,7 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Chrome'],
+    browsers: ['PhantomJS'],
 
 
     // Continuous Integration mode
@@ -105,7 +107,8 @@ module.exports = function(config) {
       'karma-mocha',
       'karma-chai',
       'karma-chrome-launcher',
-      'karma-sinon'
+      'karma-sinon',
+      'karma-phantomjs-launcher'
     ]
   });
 };
