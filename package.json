@@ -92,8 +92,8 @@
   },
   "scripts": {
     "start": "node server/app.js",
-    "test": "karma start my.conf.js",
-    "postinstall": "bower install && npm install",
+    "test": "karma start my.conf",
+    "postinstall": "bower install",
     "update-webdriver": "node node_modules/grunt-protractor-runner/node_modules/protractor/bin/webdriver-manager update"
   },
   "private": true
