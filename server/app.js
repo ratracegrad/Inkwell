@@ -19,7 +19,7 @@ app.use('/api/auth/local', expressJwt({secret: secret}));
 app.use('/api/things', expressJwt({secret: secret}));
 app.use('/api/helpRequests/votes', expressJwt({secret: secret}));
 app.use('/api/users/me', expressJwt({secret: secret}));
-app.use('/api/helpRequests/', expressJwt({secret: secret}));
+// app.use('/api/helpRequests/', expressJwt({secret: secret}));
 app.use('/api/contributions/', expressJwt({secret: secret}));
 app.use('/api/contributions/comments', expressJwt({secret: secret}));
 app.use('/api/contributions/votes', expressJwt({secret: secret}));
