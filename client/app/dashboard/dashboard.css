@@ -15,9 +15,10 @@
 	margin: 25px;
 }
 
+
 .dash-list-item:hover {
   cursor: pointer;
-  background-color: #448BCA;
+  background-color: #448BC3;
 }
 
 .dash-corner {
@@ -26,17 +27,52 @@
 .dash-list-item {
   padding: 5px 5px;
   margin-bottom: 10px;
-  height: 100px;
+  height: 75px;
+  width: 200px;
   overflow: hidden;
-  border: 3px solid #47a447;
-  border-radius: 10px;
+  /*border: 1px solid ;*/
+  /*border-radius: 10px;*/
 }
 
 a.list-item {
-  color: black;
-  display: block;
+  color: #313131;
+  margin: 0 5px 20px 0;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid #d5d5d5;
+  border-radius: 8px;
+  text-align: left;
+  float: left;
+  cursor: pointer;
+
 }
+a.list-item:hover {
+  border: 1px solid #000;
+  color: #000;
+  text-decoration: none;
+}
+
 
 .dash-helpRequest .title {
   font-size: 18px;
 }
+
+.col-md-4 {
+  clear:right;
+}
+
+.listing-item-icon {
+  width: 70px;
+  float: left;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.myPadding {
+  padding: 0 5px 10px 3px;
+}
+
+.request-title {
+  margin-top: 5px;
+}
+

@@ -81,6 +81,7 @@
     "karma-requirejs": "~0.2.1",
     "karma-script-launcher": "~0.1.0",
     "karma-sinon": "^1.0.4",
+    "lodash-node": "^3.8.0",
     "mocha": "^2.2.4",
     "open": "~0.0.4",
     "requirejs": "~2.1.11",

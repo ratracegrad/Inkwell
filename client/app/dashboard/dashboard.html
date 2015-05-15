@@ -1,56 +1,35 @@
 <div ng-include="'components/navbar/navbar.html'"></div>
 
 <div class="container">
-    <div class="row">
-      <div class="col-sm-6 salutation">
-        <h3>Welcome {{user.username}}!</h3>
-        <h4>Start writing today...</h4>
-      </div>
-      <div class="col-sm-6 dash-corner">
-        <p>You Have {{user.numberUnseenHelps}} new help from others! <a class="btn btn-success btn-lg" aria-label="Left Align" href="/inbox">
-          <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
-        </a></p>
-        <h4>You have {{user.votes}} likes for your writing!</h4>
-      </div>
-    </div>
-</div>
-
-
-<div class="container">
   <div class="row">
     <div class="col-lg-6">
-      <h3 class="page-header">Your Outstanding Help Requests <a class= "btn btn-primary btn-lg" href="/submission">Add New</a></h3>
-      <a class="list-item" ng-repeat="request in user.helpRequests | orderBy: '-createdAt'" ng-click="loadHelpRequest(request.id)">
+      <h3 class="page-header">Your Outstanding Help Requests <a href="/submission"></a></h3>
+      <div class="span3" ng-repeat="request in user.helpRequests | orderBy: '-createdAt'">
+      <a class="list-item" ng-click="loadHelpRequest(request.id)">
+       <div class="listing-item-icon"><i class="icon-book icon-3x"></i></div>
         <div class="dash-helpRequest dash-list-item">
-          <div class="row">
-            <div class="col-md-4 title">
-              {{request.title}}
-            </div>
-            <div class="col-md-4 summary">
-              {{request.summary}}
-            </div>
-            <div class="col-md-4 date">
-              {{request.createdAt | date:'yyyy-MM-dd'}}
-            </div>
-          </div>
+          <div class="request-title"> <strong>{{request.title}}</strong></div>
+            <div>Created: {{request.createdAt | date:'MM-dd-yyyy'}} </div>
+            <div>Created By: {{request.username}} </div>
         </div>
        </a>
+     </div>
     </div>
+
     <div class="col-lg-6">
-      <h3 class="page-header">Your contributions <a class= "btn btn-primary btn-lg" href="/allHelpRequest">Contribute</a></h3>
-      <a class="list-item" ng-repeat="contribution in user.contributions | orderBy: '-origDate'" ng-click='loadContribution(contribution.id)'> 
-        <div class="dash-contribution dash-list-item">
-          <div class="row">
-            <div class="col-md-8 title">
-              {{contribution.textSnippet}}
-            </div>
-            <div class="col-md-4 date">
-              {{contribution.origDate | date:'yyyy-MM-dd'}}
-            </div>
+      <h3 class="page-header">Your contributions <a href="/allHelpRequest"></a></h3>
+      <div class="span3" ng-repeat="contribution in user.contributions | orderBy: '-origDate'">
+      <a class="list-item"  ng-click='loadContribution(contribution.id)'> 
+       <div class="listing-item-icon"><i class="icon-book icon-3x"></i></div>
+        <div class="dash-helpRequest dash-list-item">
+            <div>{{contribution.textSnippet.substr(0,40)}}</div>
+            <div>Created: {{contribution.origDate | date:'MM-dd-yyyy'}}</div>
           </div>
         </div>
       </a>
     </div>
+    </div>
   </div>
-</div>      
-	
+ </div> 
+</div> 
+
