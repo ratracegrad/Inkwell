@@ -11,6 +11,8 @@ angular.module('familyThiefApp')
       currentUser = User.get();
     }
 
+    var localHelpRequest = false;
+
     return {
 
       /**
@@ -167,6 +169,14 @@ angular.module('familyThiefApp')
 
        getContribution: function() {
          return contributionId;
+       },
+
+       saveLocalRequest: function(request){
+        localHelpRequest = request;
+       },
+
+       getLocalRequest: function(){
+        return localHelpRequest;
        }
 
 

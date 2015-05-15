@@ -1,9 +1,5 @@
 <div ng-include="'components/navbar/navbar.html'"></div>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-8">
-        <h1>Your New Help Request</h1>
-        <form name="helpRequestForm" class="submission-form" ng-submit="submitHelpRequest(helpRequestForm.$valid)" novalidate>
+        <!-- <form name="helpRequestForm" class="submission-form" ng-submit="submitHelpRequest(helpRequestForm.$valid)" novalidate>
           <div class="form-group">
             <label for="helpRequestTitle">Title</label>
             <input type="text" class="form-control" ng-model="helpRequest.title" id="helpRequestTitle" name="title" required>
@@ -24,7 +20,25 @@
             <p ng-show="helpRequestForm.summary.$invalid && !helpRequestForm.summary.$pristine" class="help-block">Your summary is required.</p>
           </div>
           <button type="submit" class="btn btn-primary" ng-disabled="userForm.$invalid">Submit</button><p ng-show="submissionSuccess === true" class="success-color">Your help request for this piece of writing has been submitted.</p><p ng-show="submissionError === true" class="error-color">You need to fill more of the form out</p>
-        </form>
-      </div>
+        </form> -->
+<div class="left-holder">
+  <form name="helpRequestForm" class="submission-form" ng-submit="submitHelpRequest(helpRequestForm.$valid)" novalidate>
+    <div class="form-group">
+      <input type="text" class="form-control input-title left-padding pencil-img" ng-model="helpRequest.title" id="helpRequestTitle" name="title" required placeholder="Type title here." autocomplete="off">
     </div>
-  </div>
+    <div class="form-group">
+      <textarea msd-elastic rows="15" type="text" class="form-control input-text-model no-resize left-padding" ng-model="helpRequest.text" id="helpRequestText" name="text" required>
+        My header here
+      </textarea>
+    </div>
+    <div class="form-group">
+      <input rows="8" type="text" class="form-control no-resize input-summary left-padding pencil-img" ng-model="helpRequest.summary" id="helpRequestSummary" name="summary" required placeholder="summary of what you want help with"></input>
+    </div>
+    <button type="submit" class="btn btn-primary btn-hero" ng-disabled="userForm.$invalid">Submit</button><p ng-show="submissionSuccess === true" class="success-color">Your help request for this piece of writing has been submitted.</p><p ng-show="submissionError === true" class="error-color">You need to fill more of the form out</p>
+  </form>
+</div>
+
+<div class="right-holder">
+  <h1 class="header-block">New Request</h1>
+  <div class="text-preview" marked="helpRequest.text"></div>
+</div>

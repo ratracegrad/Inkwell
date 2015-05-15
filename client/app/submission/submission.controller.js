@@ -5,6 +5,7 @@ angular.module('familyThiefApp')
     $scope.currentUser = Auth.getCurrentUser();
 
     $scope.helpRequest = {};
+    $scope.helpRequest.text = "### Replace this with your beautiful writing.";
     $scope.submissionSuccess = false;
     $scope.submissionError = false;
 

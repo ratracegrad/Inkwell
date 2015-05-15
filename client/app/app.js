@@ -5,7 +5,9 @@ angular.module('familyThiefApp', [
   'ngResource',
   'ngSanitize',
   'ui.router',
-  'ui.bootstrap'
+  'ui.bootstrap',
+  'hc.marked',
+  'monospaced.elastic'
 ])
   .config(function ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
     $urlRouterProvider
@@ -39,7 +41,7 @@ angular.module('familyThiefApp', [
       }
     };
   })
-
+  
   .run(function ($rootScope, $location, Auth) {
     // Redirect to login if route requires auth and you're not logged in
     $rootScope.$on('$stateChangeStart', function (event, next) {

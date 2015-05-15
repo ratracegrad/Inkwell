@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('familyThiefApp')
-  .controller('SignupCtrl', function ($scope, Auth, $location) {
+  .controller('SignupCtrl', function ($scope, Auth, $location, HelpRequest) {
     $scope.user = {};
     $scope.errors = {};
 
@@ -16,7 +16,20 @@ angular.module('familyThiefApp')
         })
         .then( function() {
           // Account created, redirect to user's dashboard
-          $location.path('/dashboard');
+          var localRequest = Auth.getLocalRequest();
+
+          if(localRequest){
+            HelpRequest.save({
+              title: localRequest.title,
+              text: localRequest.text,
+              summary: localRequest.summary
+            }, function(helpRequest){
+              // Auth.getCurrentUser().helpRequests.push(helpRequest);
+              $location.path('/dashboard');
+            });
+          } else {
+            $location.path('/dashboard');
+          }
         })
         .catch( function(err) {
           err = err.data;

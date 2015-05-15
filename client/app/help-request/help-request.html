@@ -10,6 +10,8 @@
         <p ng-model="helpRequest.summary" id="hrSummary">{{helpRequest.summary}}</p>
         <h3>Text</h3>
         <p ng-model="helpRequest.text" id="hrText">{{helpRequest.text}}</p>
+        <div marked="helpRequest.text"></div>
+        <div>HELLO HELLO</div>
       </div>
       <div class="col-md-6"> 
         <form ng-show="isOwner === false" name="contributionForm" ng-submit="respondToHelpRequest()" novalidate>   

@@ -6,7 +6,6 @@ angular.module('familyThiefApp')
       .state('allHelpRequest', {
         url: '/allHelpRequest',
         templateUrl: 'app/allHelpRequest/allHelpRequest.html',
-        controller: 'AllHelpRequestCtrl',
-        authenticate: true
+        controller: 'AllHelpRequestCtrl'
       });
   });
