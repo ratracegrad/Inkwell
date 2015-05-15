@@ -90,7 +90,7 @@ body, html{
     width: 100%;
     display: block;
     /*background: grey;*/
-    opacity: 0.3;
+    opacity: 0.9;
     padding-top: 70px;
     padding-left: 100px;
     padding-bottom: 100px;
@@ -100,13 +100,14 @@ body, html{
     letter-spacing: -3px;
     font-weight: 300;
     /*color: white;*/
-    color: black;
+    color: white;
+    font-weight: bold;
 }
 
 .help-others:hover{
-    text-decoration: none;
-    color: black;
+    /*text-decoration: none;*/
     opacity: 1;
+    color: white;
     /*background: #f8f8f8;*/
 }
 
@@ -116,7 +117,7 @@ body, html{
     height: 0; 
     border-top: 20px solid transparent;
     border-bottom: 20px solid transparent;
-    border-left: 20px solid #585858;
+    border-left: 20px solid white;
     font-size: 0px;
     right: 110px;
     margin-top: -55px;
@@ -289,11 +290,26 @@ a, :visited{
 .bordered {
     /*border-top: 3px solid #585858;*/
     /*border-bottom: 3px solid #585858;*/
-    border-right: 1px solid #C0C0C0;
-    border-bottom: 1px solid #C0C0C0;
+    /*border-right: 1px solid #C0C0C0;*/
+    /*border-bottom: 1px solid #C0C0C0;*/
+    border-left: 6px solid black;
     border-radius: 0px;
+}
+
+.bordered:hover {
+    border-left: 6px solid lightgrey;
+}
+
+.bordered:focus {
+    border-left: 6px solid #00BFFF;
 }
 
 .form-group {
     margin: 0;
+}
+
+.cat-back {
+    background: url(http://i.ytimg.com/vi/mSFTRoBY99s/hqdefault.jpg) no-repeat;
+    background-size: cover;
+    background-position: 0px -135px;
 }

@@ -5,7 +5,7 @@
     <h1 class="hero-header left-padding">inkwell</h1>
     <p class="lead left-padding">collaborative writing</p>
   </div>
-  <div class="right-holder darkgreyed">
+  <div class="right-holder cat-back">
       <a class="help-others" href='/allHelpRequest'>discover writing</a>
   </div>
 </div>
@@ -14,13 +14,11 @@
   <form name="helpRequestForm" class="submission-form" ng-submit="submitHelpRequest(helpRequestForm.$valid)" novalidate>
     <div class="form-group">
       <input type="text" class="bordered form-control input-title left-padding pencil-img" ng-model="helpRequest.title" id="helpRequestTitle" name="title" required placeholder="Type title here." autocomplete="off">
-      <p ng-show="helpRequestForm.title.$invalid && !helpRequestForm.title.$pristine" class="help-block">The title is required.</p>
     </div>
     <div class="form-group">
       <textarea msd-elastic rows="10" type="text" class="bordered form-control input-text-model no-resize left-padding" ng-model="helpRequest.text" id="helpRequestText" name="text" required>
         My header here
       </textarea>
-      <p ng-show="helpRequestForm.text.$invalid && !helpRequestForm.text.$pristine" class="help-block">Your writing is required.</p>
     </div>
     <div class="form-group">
       <input rows="8" type="text" class="bordered form-control no-resize input-summary left-padding pencil-img" ng-model="helpRequest.summary" id="helpRequestSummary" name="summary" required placeholder="summary of what you want help with"></input>
