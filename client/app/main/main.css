@@ -301,7 +301,7 @@ a, :visited{
 }
 
 .bordered:focus {
-    border-left: 6px solid #00BFFF;
+    border-left: 6px solid #4682B4;
 }
 
 .form-group {
