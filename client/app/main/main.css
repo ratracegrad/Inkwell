@@ -166,7 +166,7 @@ body, html{
     padding-left: 35px;
     overflow: hidden;
     opacity: 0.85;
-    background: #f8f8f8;
+    background: #E8E8E8;
     font-size: 16px;
     min-height: 650px;
 }
@@ -200,10 +200,15 @@ body, html{
     padding-top: 25px;
     font-family: helvetica, arial, sans-serif;
     font-size: 17px;
-    opacity: 0.75;
+    opacity: 0.85;
     max-width: 400px;
     padding-left: 100px;
     position: relative;
+}
+
+.darkened {
+    background: #383838;
+    color: #f8f8f8;
 }
 /*
 a, :visited{ 
@@ -231,7 +236,7 @@ a, :visited{
     height: 0; 
     border-top: 20px solid transparent;
     border-bottom: 20px solid transparent;
-    border-right: 20px solid #585858;
+    border-right: 20px solid white;
     font-size: 0px;
     margin-left: -60px;
     margin-top: -50px;
