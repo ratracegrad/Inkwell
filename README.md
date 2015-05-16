@@ -1,6 +1,6 @@
 [![Stories in Ready](https://badge.waffle.io/goose-windmill/family-thief.png?label=ready&title=Ready)](https://waffle.io/goose-windmill/family-thief)
 [![Stories in Ready](https://badge.waffle.io/family-thief/family-thief.png?label=ready&title=Ready)](https://waffle.io/family-thief/family-thief)
-https://travis-ci.org/Goose-Windmill/family-thief.svg?branch=master
+[![Build Status](https://travis-ci.org/Goose-Windmill/family-thief.svg?branch=master)](https://travis-ci.org/Goose-Windmill/family-thief)
 
 # InkWell
 
