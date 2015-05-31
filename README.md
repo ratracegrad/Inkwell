@@ -13,7 +13,8 @@
 1. [Development](#development)
     1. [Installing Dependencies](#installing-dependencies)
     1. [Roadmap](#roadmap)
-1. [Team](#team)
+1. [Live Demonstration](#live demonstration)
+1. [Screenshots](#screenshots)
 1. [Contributing](#contributing)
 
 ## Usage
@@ -49,15 +50,15 @@ bower install
 # Live Demonstration
 [You can view this app in production here](https://gw-inkwell.herokuapp.com)
 
-# Screenshot
+# Screenshots
 Home page for Inkwell
-![Inkwell Home Page](http://www.jenniferbland.com/images/inkwell/HomePage.png)
+![Inkwell Home Page](http://www.jenniferbland.com/images/inkwellHomePage.png)
 
 Inkwell Dashboard
-![Inkwell Dashboard](http://www.jenniferbland.com/images/inkwell/InkwellDashboard.png)
+![Inkwell Dashboard](http://www.jenniferbland.com/images/inkwellDashboard.png)
 
 Inkwell Discover Project
-![Inkwell Discover Projects](http://www.jenniferbland.com/images/inkwell/InkwellDiscoverProjects.png)
+![Inkwell Discover Projects](http://www.jenniferbland.com/images/inkwellDiscoverProjects.png)
 
 
 ## Contributing
