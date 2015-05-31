@@ -47,18 +47,18 @@ bower install
 
 ![relational schema](http://i.imgur.com/G078ktJ.png "Relational Schema")
 
-# Live Demonstration
+## Live Demonstration
 [You can view this app in production here](https://gw-inkwell.herokuapp.com)
 
-# Screenshots
+## Screenshots
 Home page for Inkwell
 ![Inkwell Home Page](http://www.jenniferbland.com/images/inkwellHomePage.png)
 
 Inkwell Dashboard
-![Inkwell Dashboard](http://www.jenniferbland.com/images/inkwellDashboard.png)
+![Inkwell Dashboard](http://www.jenniferbland.com/images/InkwellDashboard.png)
 
 Inkwell Discover Project
-![Inkwell Discover Projects](http://www.jenniferbland.com/images/inkwellDiscoverProjects.png)
+![Inkwell Discover Projects](http://www.jenniferbland.com/images/InkwellDiscoverProjects.png)
 
 
 ## Contributing
