@@ -6,12 +6,6 @@
 
 > A collaborative writing platform
 
-## Team
-
-  - __Product Owner__: Brandon Ellis
-  - __Scrum Master__: Adam Van Antwerp
-  - __Development Team Members__: Henry Ng, Craig Smith
-
 ## Table of Contents
 
 1. [Usage](#usage)
@@ -47,11 +41,6 @@ sudo npm install -g bower
 npm install
 bower install
 ```
-
-### Roadmap
-
-View the project roadmap [here](https://waffle.io/family-thief/family-thief).  
-View the project commit history [here](commit_history.md).
 
 ### Database Schema
 
